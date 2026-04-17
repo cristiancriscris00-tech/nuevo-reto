@@ -1,23 +1,18 @@
 name: SolarisNews 24/7
-
 on:
   schedule:
     - cron: '*/30 * * * *'
   workflow_dispatch:
-
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - run: pip install requests beautifulsoup4 lxml
-
-      - name: Crear config.json
+      - name: Config
         env:
           ORACLE_TOKEN:   ${{ secrets.ORACLE_TOKEN }}
           ORACLE_USER:    ${{ secrets.ORACLE_USER }}
@@ -30,16 +25,15 @@ jobs:
           python - <<'PYEOF'
           import json, os
           cfg = {
-            "github_token":  os.environ["ORACLE_TOKEN"],
-            "github_user":   os.environ["ORACLE_USER"],
-            "repo_name":     os.environ["ORACLE_REPO"],
-            "webhook_url":   os.environ["ORACLE_WEBHOOK"],
-            "ad_unit_id":    os.environ["ORACLE_AD_ID"],
-            "cpa_link":      os.environ["ORACLE_CPA"],
-            "paypal_email":  os.environ["ORACLE_PAYPAL"],
-            "payout_method": "paypal",
+            "github_token": os.environ["ORACLE_TOKEN"],
+            "github_user":  os.environ["ORACLE_USER"],
+            "repo_name":    os.environ["ORACLE_REPO"],
+            "webhook_url":  os.environ["ORACLE_WEBHOOK"],
+            "ad_unit_id":   os.environ["ORACLE_AD_ID"],
+            "cpa_link":     os.environ["ORACLE_CPA"],
+            "paypal_email": os.environ["ORACLE_PAYPAL"],
+            "payout_method":"paypal",
           }
-          open("config.json", "w").write(json.dumps(cfg))
+          open("config.json","w").write(json.dumps(cfg))
           PYEOF
-
       - run: python astral_oracle.py --once
