@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""astral_oracle.py — V8.0 'Private Sniper' · Oracle Financial AI · @solaris01"""
+"""astral_oracle.py — V8.0 'Private Sniper' · Oracle Financial AI · @01solaris01"""
 import base64, json, logging, random, re, sys, time, requests
 from datetime import datetime
 from pathlib import Path
@@ -233,7 +233,7 @@ def _og_svg():
         '<text x="60" y="248" font-family="monospace" font-size="78" font-weight="bold" fill="#f5f5f0">SOLARIS</text>'
         '<text x="60" y="328" font-family="monospace" font-size="78" font-weight="bold" fill="#22c55e">.NEWS</text>'
         '<text x="60" y="393" font-family="monospace" font-size="20" fill="#9ca3af">'
-        'Inteligencia Geopolitica - Oracle Financial AI - @solaris01</text>'
+        'Inteligencia Geopolitica - Oracle Financial AI - @01solaris01</text>'
         '<text x="60" y="448" font-family="monospace" font-size="12" fill="#22c55e" opacity="0.6">'
         'SHA-256: 3f7a2c1b9e4d - TLS-1.3 - ORACLE v8.0 - PRIVATE SNIPER MODE</text>'
         '<rect x="878" y="188" width="262" height="130" fill="none" stroke="#22c55e"'
@@ -565,7 +565,7 @@ def _nav(now, user, repo):
     <a href="{base}/" class="mono font-black text-xl tracking-widest"
        style="color:var(--bone);text-decoration:none;">SOLARIS<span class="g">.</span>NEWS</a>
     <p class="mono muted hide-sm" style="font-size:.58rem;margin-top:.1rem;">
-      ORACLE FINANCIAL AI v8.0 · PRIVATE SNIPER · @solaris01
+      ORACLE FINANCIAL AI v8.0 · PRIVATE SNIPER · @01solaris01
     </p>
   </div>
   <div class="flex items-center gap-4">
@@ -786,13 +786,13 @@ def _tiktok_cta():
     return """
 <div style="text-align:center;padding:2rem 1rem 3rem;">
   <p class="mono muted" style="font-size:.62rem;letter-spacing:.12em;margin-bottom:.75rem;">◉ CANAL DE INTELIGENCIA PRINCIPAL</p>
-  <a href="https://www.tiktok.com/@solaris01" target="_blank" rel="noopener" class="btn-tt">
+  <a href="https://www.tiktok.com/@01solaris01" target="_blank" rel="noopener" class="btn-tt">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="#22c55e">
       <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
     </svg>
     SUSCRIBIRSE AL CANAL DE INTELIGENCIA (TIKTOK)
   </a>
-  <p class="mono muted" style="font-size:.58rem;margin-top:.75rem;">@solaris01 · ACTUALIZACIONES DIARIAS · SIN FILTROS</p>
+  <p class="mono muted" style="font-size:.58rem;margin-top:.75rem;">@01solaris01 · ACTUALIZACIONES DIARIAS · SIN FILTROS</p>
 </div>"""
 
 # ── HTML: Article ─────────────────────────────────────────────────────────────
@@ -973,7 +973,7 @@ def build_home(trends, cfg, hot_topics):
 
     return (
         _html_head("SolarisNews — Oracle Financial AI | Inteligencia Geopolítica",
-                   "Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @solaris01.",
+                   "Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @01solaris01.",
                    canon, og_img, _bg_url(cfg))
         + f"""
 <body>
