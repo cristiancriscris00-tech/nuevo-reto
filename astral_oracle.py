@@ -344,8 +344,20 @@ def ensure_setup(cfg):
     if rp.status_code in (200, 201):   log.info("Pages activado.")
     elif rp.status_code in (409, 422): log.info("Pages ya activo.")
     _push("og.svg", _og_svg(), cfg)
+    _upload_bg(cfg)
     ensure_ads_txt(cfg)
     return True
+
+def _upload_bg(cfg):
+    local = Path("/home/rocki/solaris_bg.jpg")
+    if not local.exists():
+        return
+    if _push("solaris_bg.jpg", local.read_bytes(), cfg):
+        log.info("solaris_bg.jpg ✅ subido.")
+
+def _bg_url(cfg):
+    return (f"https://{cfg['github_user']}.github.io"
+            f"/{cfg['repo_name']}/solaris_bg.jpg")
 
 def ensure_ads_txt(cfg):
     ad_id = cfg.get("ad_unit_id", "")
@@ -448,7 +460,17 @@ body{
 @media(max-width:640px){.hide-sm{display:none!important;}}
 """
 
-def _html_head(title, desc, canon, og_image):
+def _html_head(title, desc, canon, og_image, bg_url=""):
+    bg_css = f"""
+body::after {{
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('{bg_url}') center/cover no-repeat;
+  opacity: 0.18;
+  z-index: -1;
+  pointer-events: none;
+}}""" if bg_url else ""
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -475,7 +497,7 @@ def _html_head(title, desc, canon, og_image):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>{_CSS}</style>
+  <style>{_CSS}{bg_css}</style>
 </head>"""
 
 # ── HTML: Password Overlay ────────────────────────────────────────────────────
@@ -815,7 +837,7 @@ def build_article(trend, cfg, hot_topics):
     return (
         _html_head(f"{_esc(trend['title'])} | SolarisNews Intel",
                    f"{trend['title']} — Análisis geopolítico SolarisNews Oracle Financial AI.",
-                   canon, og_img)
+                   canon, og_img, _bg_url(cfg))
         + f"""
 <body>
 {_pw_overlay(pw)}
@@ -952,7 +974,7 @@ def build_home(trends, cfg, hot_topics):
     return (
         _html_head("SolarisNews — Oracle Financial AI | Inteligencia Geopolítica",
                    "Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @solaris01.",
-                   canon, og_img)
+                   canon, og_img, _bg_url(cfg))
         + f"""
 <body>
 {_pw_overlay(pw)}
