@@ -3,180 +3,353 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content="Portal de inteligencia geopolítica y financiera. Noticias filtradas, análisis profundo, commodities en tiempo real."/>
-  <meta property="og:title" content="SolarisNews Oracle Zero | Inteligencia Geopolítica Global"/>
-  <meta property="og:type" content="website"/>
+  <title>SolarisNews — Oracle Financial AI | Inteligencia Geopolítica</title>
+  <meta name="description" content="Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @solaris01."/>
+  <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="https://cristiancriscris00-tech.github.io/nuevo-reto/"/>
-  <title>SolarisNews Oracle Zero | Inteligencia Geopolítica Global</title>
+  <meta property="og:type"         content="article"/>
+  <meta property="og:title"        content="SolarisNews — Oracle Financial AI | Inteligencia Geopolítica"/>
+  <meta property="og:description"  content="Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @solaris01."/>
+  <meta property="og:image"        content="https://cristiancriscris00-tech.github.io/nuevo-reto/og.svg"/>
+  <meta property="og:image:width"  content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:url"          content="https://cristiancriscris00-tech.github.io/nuevo-reto/"/>
+  <meta property="og:site_name"    content="SolarisNews — Private Intel"/>
+  <meta property="og:locale"       content="es_ES"/>
+  <meta name="twitter:card"        content="summary_large_image"/>
+  <meta name="twitter:title"       content="SolarisNews — Oracle Financial AI | Inteligencia Geopolítica"/>
+  <meta name="twitter:description" content="Portal de inteligencia geopolítica y financiera. Análisis Oracle AI, correlaciones Oro/Petróleo/BTC. Canal @solaris01."/>
+  <meta name="twitter:image"       content="https://cristiancriscris00-tech.github.io/nuevo-reto/og.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    *{box-sizing:border-box;}
-    body{background:#020202;font-family:'Inter',sans-serif;}
-    .mono{font-family:'Courier New',Courier,monospace;}
-    .neon{color:#6366f1;text-shadow:0 0 14px #6366f199;}
-    .amber{color:#f59e0b;text-shadow:0 0 10px #f59e0b66;}
-    .card{background:#0a0a0f;border:1px solid #1e1b4b;border-radius:1rem;
-           box-shadow:0 0 24px #6366f10d;transition:transform .15s,box-shadow .15s;}
-    .card:hover{transform:translateY(-2px);box-shadow:0 0 32px #6366f122;}
-    .ticker-bar{background:#060610;border-bottom:1px solid #1e1b4b;}
-    .intel-block{background:#0d0b2a;border:1px solid #3730a3;border-radius:.875rem;}
-    .store-card{background:#0a0805;border:1px solid #92400e;border-radius:1rem;}
-    .chat-msg{background:#08080f;border-left:2px solid #6366f1;padding:.5rem .75rem;
-               margin:.4rem 0;border-radius:0 .5rem .5rem 0;font-size:.7rem;}
-    .pulse{animation:pulse 2s infinite;}
-    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
-    @media(max-width:640px){.hide-mobile{display:none!important;}}
-  </style>
-  <!-- Adsterra Social Bar -->
-  <script type="text/javascript"
-    src="//pl5727681.highperformancegate.com/5727681/invoke.js" async defer></script>
+:root {
+  --g:#22c55e; --gd:rgba(34,197,94,.12); --gb:rgba(34,197,94,.2);
+  --bg:#0a0a0a; --bc:#111; --bone:#f5f5f0; --muted:#6b7280;
+  --red:#ef4444; --amb:#eab308; --cyn:#06b6d4; --org:#f97316;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background-color:var(--bg);
+  background-image:linear-gradient(rgba(34,197,94,.03)1px,transparent 1px),
+                   linear-gradient(90deg,rgba(34,197,94,.03)1px,transparent 1px);
+  background-size:40px 40px;
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--bone); min-height:100vh;
+}
+.mono{font-family:'JetBrains Mono','Courier New',monospace;}
+.g{color:var(--g);} .gg{color:var(--g);text-shadow:0 0 12px rgba(34,197,94,.5);}
+.muted{color:var(--muted);} .red{color:var(--red);}
+.amb{color:var(--amb);} .cyn{color:var(--cyn);}
+.win{background:var(--bc);border:1px solid var(--gb);border-radius:.75rem;
+     overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.win:hover{border-color:rgba(34,197,94,.4);box-shadow:0 0 28px rgba(34,197,94,.07);}
+.wbar{background:#141414;border-bottom:1px solid var(--gb);
+      padding:.45rem .75rem;display:flex;align-items:center;gap:.5rem;}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+.dr{background:#ef4444;} .dy{background:#eab308;} .dg{background:var(--g);}
+@keyframes scanline{
+  0%{transform:translateY(-10%);opacity:0;}5%{opacity:.5;}
+  95%{opacity:.5;}100%{transform:translateY(110vh);opacity:0;}
+}
+.scanline{position:fixed;top:0;left:0;width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--g),transparent);
+  animation:scanline 5s linear infinite;pointer-events:none;z-index:200;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.blink{animation:blink 1s step-start infinite;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.fadein{animation:fadein .4s ease both;}
+@keyframes marquee{0%{transform:translateX(100%);}100%{transform:translateX(-200%);}}
+.marquee{display:inline-block;animation:marquee 38s linear infinite;white-space:nowrap;}
+.btn-g{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  border:1px solid var(--g);color:var(--g);background:transparent;
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;
+  padding:.75rem 1.4rem;border-radius:.625rem;text-decoration:none;
+  transition:background .2s,box-shadow .2s;letter-spacing:.05em;}
+.btn-g:hover{background:rgba(34,197,94,.1);box-shadow:0 0 20px rgba(34,197,94,.2);}
+.btn-a{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  border:1px solid var(--amb);color:var(--amb);background:transparent;
+  font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;
+  padding:.75rem 1.4rem;border-radius:.625rem;text-decoration:none;
+  transition:background .2s,box-shadow .2s;letter-spacing:.05em;}
+.btn-a:hover{background:rgba(234,179,8,.1);box-shadow:0 0 20px rgba(234,179,8,.2);}
+.btn-tt{display:flex;align-items:center;justify-content:center;gap:.75rem;
+  background:linear-gradient(135deg,#0d0d0d,#181818);
+  border:1.5px solid var(--g);color:var(--bone);
+  font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:700;
+  padding:1.1rem 2rem;border-radius:.875rem;text-decoration:none;
+  transition:box-shadow .2s,transform .15s;letter-spacing:.07em;
+  width:100%;max-width:600px;margin:0 auto;}
+.btn-tt:hover{box-shadow:0 0 40px rgba(34,197,94,.25);transform:translateY(-2px);}
+.badge{font-family:'JetBrains Mono',monospace;font-size:.58rem;font-weight:700;
+  letter-spacing:.1em;padding:.15rem .45rem;border-radius:.25rem;display:inline-block;}
+.bg{border:1px solid var(--g);color:var(--g);}
+.br{border:1px solid var(--red);color:var(--red);}
+.ba{border:1px solid var(--amb);color:var(--amb);}
+.bc{border:1px solid var(--cyn);color:var(--cyn);}
+.bm{border:1px solid #374151;color:var(--muted);}
+.supply{background:#0e0e0e;border:1px solid rgba(234,179,8,.18);border-radius:.75rem;
+  padding:1rem;transition:border-color .2s;text-decoration:none;display:block;}
+.supply:hover{border-color:rgba(234,179,8,.45);}
+.layer{background:#0c0c0c;border:1px solid #1a1a1a;border-radius:.625rem;
+  padding:1rem 1.25rem;margin-bottom:.75rem;}
+#pwo{position:fixed;inset:0;background:#0a0a0a;z-index:9999;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;}
+#pwo.hidden{display:none;}
+@media(max-width:640px){.hide-sm{display:none!important;}}
+</style>
 </head>
-<body class="text-white min-h-screen">
+<body>
 
-<nav style="background:#060610;border-bottom:1px solid #1e1b4b;"
+<div id="pwo">
+  <div style="border:1px solid rgba(34,197,94,.3);background:#111;border-radius:1rem;
+              padding:2.5rem 2rem;max-width:380px;width:90%;text-align:center;">
+    <p class="mono g" style="font-size:.62rem;letter-spacing:.2em;margin-bottom:1.25rem;">
+      ◉ SOLARIS PRIVATE INTEL · ACCESO RESTRINGIDO
+    </p>
+    <p style="font-size:2rem;margin-bottom:.75rem;">🔒</p>
+    <h2 class="mono" style="font-size:.95rem;font-weight:700;color:var(--bone);margin-bottom:1.25rem;">
+      INTRODUCE CLAVE DE ACCESO
+    </h2>
+    <input id="pwi" type="password" placeholder="••••••••"
+      style="width:100%;background:#0a0a0a;border:1px solid rgba(34,197,94,.3);border-radius:.5rem;
+             padding:.75rem 1rem;color:var(--bone);font-family:'JetBrains Mono',monospace;
+             font-size:.85rem;outline:none;margin-bottom:.875rem;text-align:center;"
+      onkeydown="if(event.key==='Enter')_cpw()"/>
+    <button onclick="_cpw()"
+      style="width:100%;background:rgba(34,197,94,.1);border:1px solid var(--g);
+             color:var(--g);font-family:'JetBrains Mono',monospace;font-size:.75rem;
+             font-weight:700;padding:.75rem;border-radius:.5rem;cursor:pointer;letter-spacing:.08em;">
+      VERIFICAR ACCESO →
+    </button>
+    <p id="pwe" class="mono red" style="font-size:.62rem;margin-top:.6rem;display:none;">
+      ✗ CLAVE INCORRECTA. ACCESO DENEGADO.
+    </p>
+  </div>
+  <p class="mono muted" style="font-size:.58rem;margin-top:1.25rem;">
+    SOLARISNEWS · ORACLE v8.0 · PRIVATE SNIPER MODE
+  </p>
+</div>
+<script>
+(function(){
+  const K="c29sYXJpczIwMjQ=";
+  if(sessionStorage.getItem("sa")===K)document.getElementById("pwo").classList.add("hidden");
+})();
+function _cpw(){
+  const K="c29sYXJpczIwMjQ=";
+  if(btoa(document.getElementById("pwi").value)===K){
+    sessionStorage.setItem("sa",K);
+    document.getElementById("pwo").classList.add("hidden");
+  }else{
+    document.getElementById("pwe").style.display="block";
+    document.getElementById("pwi").value="";
+    document.getElementById("pwi").focus();
+  }
+}
+</script>
+
+<div class="scanline"></div>
+<nav style="background:rgba(10,10,10,.96);border-bottom:1px solid rgba(34,197,94,.15);
+            backdrop-filter:blur(8px);"
      class="px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-50">
   <div>
-    <a href="/" class="neon font-black text-xl mono tracking-widest">◈ SOLARIS<span style="color:#fff">NEWS</span></a>
-    <p class="mono text-slate-600 text-xs mt-0.5 hide-mobile">ORACLE ZERO · GLOBAL INTELLIGENCE HUB</p>
+    <a href="https://cristiancriscris00-tech.github.io/nuevo-reto/" class="mono font-black text-xl tracking-widest"
+       style="color:var(--bone);text-decoration:none;">SOLARIS<span class="g">.</span>NEWS</a>
+    <p class="mono muted hide-sm" style="font-size:.58rem;margin-top:.1rem;">
+      ORACLE FINANCIAL AI v8.0 · PRIVATE SNIPER · @solaris01
+    </p>
   </div>
-  <div class="flex items-center gap-3">
-    <span class="mono text-xs text-indigo-400 hide-mobile">17 Apr 2026 · 21:04</span>
-    <span class="mono text-xs" style="color:#22c55e;">● <span class="pulse">LIVE</span></span>
+  <div class="flex items-center gap-4">
+    <span class="mono muted hide-sm" style="font-size:.62rem;">17 Apr 2026 · 21:19</span>
+    <span class="mono gg" style="font-size:.7rem;">● LIVE<span class="blink">_</span></span>
   </div>
 </nav>
 
-<!-- TradingView Ticker Widget -->
-<div class="ticker-bar py-2 px-2 overflow-hidden">
+<div style="background:#060606;border-bottom:1px solid rgba(34,197,94,.1);
+            padding:.3rem 0;overflow:hidden;">
+  <p class="marquee mono g" style="font-size:.62rem;letter-spacing:.07em;">
+    &nbsp;&nbsp;⬤ SISTEMA DE ANÁLISIS PREDICTIVO SOLARIS v8.0 ONLINE &nbsp;·&nbsp;
+    ORACLE FINANCIAL AI ACTIVO &nbsp;·&nbsp;
+    CORRELACIONES ORO / PETRÓLEO / BTC EN TIEMPO REAL &nbsp;·&nbsp;
+    PRIVATE SNIPER MODE ENGAGED &nbsp;·&nbsp;
+    FILTRO ANTI-RUIDO: ACTIVO &nbsp;·&nbsp;
+    FUENTES: CASA BLANCA + MEDIOS EUROPEOS + EL ECONOMISTA &nbsp;·&nbsp;
+    NODE: ES-INTEL-01 · TLS-1.3 · ENCRYPTED &nbsp;·&nbsp;
+    ⬤ SISTEMA DE ANÁLISIS PREDICTIVO SOLARIS v8.0 ONLINE &nbsp;&nbsp;
+  </p>
+</div>
+
+<div style="background:#0d0d0d;border-bottom:1px solid rgba(34,197,94,.08);">
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript"
       src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
     {
       "symbols":[
-        {"proName":"OANDA:XAUUSD","title":"Oro XAU/USD"},
-        {"proName":"OANDA:BCOUSD","title":"Brent Crudo"},
-        {"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"},
-        {"proName":"BME:IBC","title":"IBEX 35"},
+        {"proName":"OANDA:XAUUSD","title":"ORO"},
+        {"proName":"OANDA:BCOUSD","title":"BRENT"},
+        {"proName":"BITSTAMP:BTCUSD","title":"BTC"},
+        {"proName":"BME:IBC","title":"IBEX35"},
         {"proName":"FX_IDC:EURUSD","title":"EUR/USD"}
       ],
-      "showSymbolLogo":true,
-      "colorTheme":"dark",
-      "isTransparent":true,
-      "displayMode":"adaptive",
-      "locale":"es"
+      "showSymbolLogo":true,"colorTheme":"dark","isTransparent":true,
+      "displayMode":"adaptive","locale":"es"
     }
     </script>
   </div>
 </div>
 
-<!-- Hero -->
-<header class="text-center py-10 px-4" style="background:linear-gradient(180deg,#0d0b1a 0%,#020202 100%);">
-  <p class="mono text-xs text-indigo-400 tracking-widest mb-3 pulse">◉ SISTEMA ORACLE ZERO — MONITORIZACIÓN GLOBAL ACTIVA</p>
-  <h1 class="text-4xl sm:text-6xl font-black mb-2"
-      style="background:linear-gradient(90deg,#6366f1,#a5b4fc,#fff);
-             -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
-    SolarisNews
+<header style="text-align:center;padding:3rem 1rem 2.5rem;
+               background:linear-gradient(180deg,#0d0d0d,var(--bg));
+               border-bottom:1px solid rgba(34,197,94,.08);">
+  <p class="mono g" style="font-size:.62rem;letter-spacing:.2em;margin-bottom:.75rem;">
+    ◉ ESCANEANDO SISTEMA<span class="blink">_</span> · ORACLE FINANCIAL AI ACTIVO
+  </p>
+  <h1 class="font-black" style="font-size:clamp(2.5rem,8vw,5rem);letter-spacing:-.02em;line-height:1;margin-bottom:.75rem;">
+    <span style="color:var(--bone);">SOLARIS</span><span class="gg">.</span><span class="gg">NEWS</span>
   </h1>
-  <p class="mono text-slate-500 text-xs sm:text-sm">
-    ORACLE ZERO · 20 ALERTAS GEOPOLÍTICAS ACTIVAS · <span id="ts"></span>
+  <p class="mono muted" style="font-size:.7rem;letter-spacing:.1em;">
+    ORACLE FINANCIAL AI v8.0 · PRIVATE SNIPER ·
+    <span class="g">20 ALERTAS ACTIVAS</span> · <span id="ts_h"></span>
+  </p>
+  <p class="mono" style="font-size:.56rem;color:#374151;margin-top:.4rem;">
+    FILTRO ANTI-RUIDO: ACTIVO · ORO/BTC/PETRÓLEO · TLS-1.3 · NODO-ES
   </p>
 </header>
 
-<div class="max-w-6xl mx-auto px-4 pb-16">
-
-  <!-- Subscribe banner -->
+<div class="max-w-screen-xl mx-auto px-4 py-8">
   
-<div style="background:linear-gradient(135deg,#0d0b2a,#020202);border:1px solid #3730a3;"
-     class="rounded-2xl p-6 mb-8 text-center">
-  <p class="mono text-xs text-indigo-400 uppercase tracking-widest mb-2">◉ NIVEL DE ACCESO 5</p>
-  <h2 class="text-xl sm:text-2xl font-black text-white mb-2">
-    INTELIGENCIA SIN FILTROS — <span class="neon">PRÓXIMAMENTE</span>
-  </h2>
-  <p class="text-slate-400 text-sm mb-4 max-w-lg mx-auto">
-    Recibe los informes de inteligencia geopolítica antes que nadie.
-    Acceso directo a los análisis de alto nivel. Sin ruido. Sin censura.
-  </p>
-  <button class="mono text-xs px-6 py-3 rounded-xl font-bold text-white cursor-default"
-          style="background:#1e1b4b;border:1px solid #6366f1;">
-    UNIRSE A LA LISTA DE ESPERA →
-  </button>
+<div class="win" style="margin-bottom:2rem;border-color:rgba(34,197,94,.25);">
+  <div class="wbar" style="background:#0d120d;">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono g" style="font-size:.58rem;margin-left:.4rem;">ACCESO-NIVEL-5.init</span>
+  </div>
+  <div style="padding:1.5rem 2rem;text-align:center;">
+    <p class="mono g" style="font-size:.58rem;letter-spacing:.18em;margin-bottom:.5rem;">◉ NIVEL 5 — RESTRINGIDO</p>
+    <h2 class="font-black" style="font-size:clamp(1.1rem,3vw,1.6rem);color:var(--bone);margin-bottom:.5rem;">
+      INTELIGENCIA SIN FILTROS — <span class="gg">PRÓXIMAMENTE</span>
+    </h2>
+    <p class="muted" style="font-size:.85rem;margin-bottom:1.25rem;max-width:420px;margin-left:auto;margin-right:auto;">
+      Informes de inteligencia geopolítica antes que nadie. Sin ruido. Sin censura.
+    </p>
+    <button class="btn-g" style="cursor:default;">UNIRSE A LA LISTA DE ESPERA →</button>
+  </div>
 </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-    <!-- Columna principal: noticias -->
     <div class="lg:col-span-2">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="mono text-xs text-red-400 border border-red-900 px-2 py-1 rounded">◉ EN DIRECTO</span>
-        <span class="mono text-xs text-slate-600">20 INFORMES · FILTRO GEOPOLÍTICO ACTIVO</span>
+      <div class="wbar" style="background:#0e0e0e;border:1px solid var(--gb);
+                               border-radius:.75rem .75rem 0 0;border-bottom:none;">
+        <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+        <span class="mono muted" style="font-size:.58rem;margin-left:.4rem;">
+          INTEL-FEED.live · 20 INFORMES · ES-NODE
+        </span>
+        <span class="mono g" style="font-size:.58rem;margin-left:auto;">● EN DIRECTO</span>
       </div>
-      <ul class="space-y-3"><li><a href="./el-pp-intenta-marcar-distancias-del-acuerdo-con-vox-en-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#01 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">El PP intenta marcar distancias del acuerdo con Vox en Extremadura: «No influye en nada»</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente de la Junta de Castilla y León en funciones, Alfonso Fernández Mañueco , ha defendido que el acuerdo entre…</p></a></li><li><a href="./m-laga-revive-con-bernardo-de-g-lvez-la-historia-espa-o/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#02 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Málaga revive con Bernardo de Gálvez la historia española detrás del nacimiento de Estados Unidos</h2><p class="mono text-xs text-slate-500 leading-relaxed">Hay apellidos que explican una ciudad y otros que ayudan a contar el nacimiento de un país. En Málaga , Gálvez hace amba…</p></a></li><li><a href="./la-derecha-se-vuelca-con-corina-machado-ante-la-indifer/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#03 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La derecha se vuelca con Corina Machado ante la indiferencia del Gobierno</h2><p class="mono text-xs text-slate-500 leading-relaxed">Los partidos de la derecha española dieron una calurosa bienvenida a la líder opositora de Venezuela María Corina Machad…</p></a></li><li><a href="./el-psoe-denuncia-el-grave-deterioro-del-casco-por-la-in/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#04 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">El PSOE denuncia el «grave deterioro» del Casco por la invasión de cartelería que no cumple la ordenanza</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Grupo Municipal Socialista ha denunciado este viernes un incumplimiento generalizado de la Ordenanza Reguladora de Pu…</p></a></li><li><a href="./m-corina-machado-recibe-la-llave-de-oro-al-grito-de-lib/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#05 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Mª Corina Machado recibe la Llave de Oro al grito de «libertad»: «Que este día podamos repetirlo en una Venezuela libre»</h2><p class="mono text-xs text-slate-500 leading-relaxed">«Las llaves abren puertas y son hoy ese símbolo de las libertades». Con estas palabras, María Corina Machado asumía el h…</p></a></li><li><a href="./el-primer-v-deo-de-la-inspecci-n-de-las-v-as-de-adamuz-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#06 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">El primer vídeo de la inspección de las vías de Adamuz revela daños en los carriles y las traviesas en el tramo anterior al del accidente</h2><p class="mono text-xs text-slate-500 leading-relaxed">La inspección ocultar realizada por los técnicos de Adif y la Guardia Civil a las vías del tramo de Adamuz revelaron dañ…</p></a></li><li><a href="./la-junta-anima-al-sector-vitivin-cola-regional-a-produc/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#07 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La Junta anima al sector vitivinícola regional a producir vino «con menor huella de carbono»</h2><p class="mono text-xs text-slate-500 leading-relaxed">La consejera de Desarrollo Sostenible, Mercedes Gómez, ha animado al sector vitivinícola de Castilla-La Mancha a avanzar…</p></a></li><li><a href="./desaparece-el-techo-de-los-pirineos-investigan-por-qu-n/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#08 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Desaparece el 'techo' de los Pirineos: investigan por qué no está en la cima la cruz del Aneto</h2><p class="mono text-xs text-slate-500 leading-relaxed">El 'techo' que corona simbólicamente los Pirineos aragoneses está en busca y captura. Lo denunció un grupo de montañeros…</p></a></li><li><a href="./espa-a-quiere-volver-a-sonre-r-en-c-rdoba-frente-a-ucra/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#09 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">España quiere volver a sonreír en Córdoba frente a Ucrania</h2><p class="mono text-xs text-slate-500 leading-relaxed">Se acabó la espera. La selección española femenina vuelve a Córdoba dos años después para enfrentarse a Ucrania en un pa…</p></a></li><li><a href="./nervios-miedo-y-confusi-n-para-conseguir-los-papeles/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#10 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Nervios, miedo y confusión para conseguir los 'papeles'</h2><p class="mono text-xs text-slate-500 leading-relaxed">La sede de Red Íncola en Valladolid hierve de actividad. Si en un día normal pueden pasarse por allí un centenar de pers…</p></a></li><li><a href="./castilla-la-mancha-rechaza-perder-agua-para-que-rieguen/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#11 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Castilla-La Mancha rechaza perder agua para que rieguen otras: «Volver al secano es la muerte»</h2><p class="mono text-xs text-slate-500 leading-relaxed">Castilla-La Mancha ha rechazado que los nuevos planes hidrológicos contemplen una pérdida de dotaciones de agua para la …</p></a></li><li><a href="./m-s-de-600-oportunidades-de-empleo-se-presentar-n-en-el/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#12 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Más de 600 oportunidades de empleo se presentarán en el Foro Empléate de la Diputación de Córdoba</h2><p class="mono text-xs text-slate-500 leading-relaxed">La Diputación de Córdoba, acogerá los próximos días 22 y 23 de abril el Foro 'Empléate con la Diputación de Córdoba', ev…</p></a></li><li><a href="./el-grupo-de-acci-n-local-el-z-ncara-celebra-en-belmonte/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#13 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">El Grupo de Acción Local 'El Záncara' celebra en Belmonte su 30 aniversario</h2><p class="mono text-xs text-slate-500 leading-relaxed">La Asociación de Desarrollo Integral (ADI) 'El Záncara' ha celebrado este viernes en el municipio de Belmonte su 30 aniv…</p></a></li><li><a href="./s-nchez-pone-en-guardia-al-gobierno-ante-los-pactos-de-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#14 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Sánchez pone en guardia al Gobierno ante los pactos de PP y Vox en las autonomías</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Gobierno asiste en estado de espera activa al desarrollo de la relación entre PP y Vox . El entendimiento ha fructifi…</p></a></li><li><a href="./piden-al-juzgado-del-caso-adamuz-que-aclare-m-s-la-reti/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#15 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Piden al juzgado del caso Adamuz que aclare más la retirada sin control de los cupones de las soldaduras por Adif</h2><p class="mono text-xs text-slate-500 leading-relaxed">La retirada de cupones de vía del lugar del accidente ferroviario de Adamuz por parte de Adif sin permiso judicial y su …</p></a></li><li><a href="./mar-a-corina-machado-visita-a-espa-a-en-directo-declara/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#16 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">María Corina Machado visita a España, en directo: declaraciones, encuentro con Feijóo y con Abascal y última hora hoy</h2><p class="mono text-xs text-slate-500 leading-relaxed">Sigue en directo la visita a España de María Corina Machado , líder de la oposición venezolana, con la última hora de su…</p></a></li><li><a href="./un-vocal-del-cgpj-impugna-el-proceso-para-la-elecci-n-d/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#17 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Un vocal del CGPJ impugna el proceso para la elección del juez español en Europa</h2><p class="mono text-xs text-slate-500 leading-relaxed">Nuevo revés para las pretensiones del Ejecutivo en su intento de controlar los tiempos y las formas de la Justicia, esta…</p></a></li><li><a href="./m-s-de-15-600-aspirantes-se-examinan-este-fin-de-semana/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#18 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Más de 15.600 aspirantes se examinan este fin de semana de las oposiciones del Sescam</h2><p class="mono text-xs text-slate-500 leading-relaxed">Un total de 15.613 aspirantes están admitidos este fin de semana en nuevas pruebas selectivas correspondientes a las Ofe…</p></a></li><li><a href="./s-nchez-se-viste-de-l-der-global-de-la-izquierda-para-d/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#19 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Sánchez se viste de líder global de la izquierda para desviar el foco de sus problemas en España</h2><p class="mono text-xs text-slate-500 leading-relaxed">Entre halagos, «referente» por aquí y «compañero» por allí, ambos «amigos», Pedro Sánchez arrancó, este viernes de la ma…</p></a></li><li><a href="./la-diputaci-n-de-albacete-incorpora-un-remanente-de-9-m/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#20 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La Diputación de Albacete incorpora un remanente de 9 millones de euros para los ayuntamientos</h2><p class="mono text-xs text-slate-500 leading-relaxed">La Diputación de Albacete ha aprobado con unanimidad este viernes en su pleno una incorporación de remanentes a su tesor…</p></a></li></ul>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:.75rem;padding-top:.75rem;">
+        <li class="fadein"><a href="./el-psoe-se-opone-a-que-la-diputaci-n-de-toledo-compre-a/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-001.enc</span><span class="badge br">◉ BREAKING</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">El PSOE se opone a que la Diputación de Toledo «compre a Velázquez» la Escuela de Enfermería</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La Diputación de Toledo ha aprobado este viernes la modificación de su presupuesto de 2026 tras pedir un crédito extraordinario po…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./el-pp-intenta-marcar-distancias-del-acuerdo-con-vox-en-/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-002.enc</span><span class="badge br">◉ BREAKING</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--amb);">[VIGILAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f97316;line-height:1.35;margin-bottom:.55rem;">El PP intenta marcar distancias del acuerdo con Vox en Extremadura: «No influye en nada»</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Cuando el pasado martes 14 de abril se constituyeron las Cortes de Castilla y León, tanto PP como, sobre todo, Vox, daban por hech…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"><span class="badge" style="border:1px solid #f97316;color:#f97316;">🛢️ PETRÓLEO</span></div></a></li><li class="fadein"><a href="./m-laga-revive-con-bernardo-de-g-lvez-la-historia-espa-o/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-003.enc</span><span class="badge br">◉ BREAKING</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Málaga revive con Bernardo de Gálvez la historia española detrás del nacimiento de Estados Unidos</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Hay apellidos que explican una ciudad y otros que ayudan a contar el nacimiento de un país. En Málaga , Gálvez hace ambas cosas. D…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./la-derecha-se-vuelca-con-corina-machado-ante-la-indifer/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-004.enc</span><span class="badge ba">◈ MONITOR</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">La derecha se vuelca con Corina Machado ante la indiferencia del Gobierno</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Los partidos de la derecha española dieron una calurosa bienvenida a la líder opositora de Venezuela María Corina Machado. Los pre…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./el-psoe-denuncia-el-grave-deterioro-del-casco-por-la-in/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-005.enc</span><span class="badge ba">◈ MONITOR</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">El PSOE denuncia el «grave deterioro» del Casco por la invasión de cartelería que no cumple la ordenanza</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">El Grupo Municipal Socialista ha denunciado este viernes un incumplimiento generalizado de la Ordenanza Reguladora de Publicidad y…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./m-corina-machado-recibe-la-llave-de-oro-al-grito-de-lib/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-006.enc</span><span class="badge ba">◈ MONITOR</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Mª Corina Machado recibe la Llave de Oro al grito de «libertad»: «Que este día podamos repetirlo en una Venezuela libre»</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">«Las llaves abren puertas y son hoy ese símbolo de las libertades». Con estas palabras, María Corina Machado asumía el honor que l…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./el-primer-v-deo-de-la-inspecci-n-de-las-v-as-de-adamuz-/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-007.enc</span><span class="badge ba">◈ MONITOR</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">El primer vídeo de la inspección de las vías de Adamuz revela daños en los carriles y las traviesas en el tramo anterior al del accidente</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La inspección ocultar realizada por los técnicos de Adif y la Guardia Civil a las vías del tramo de Adamuz revelaron daños en los …</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./la-junta-anima-al-sector-vitivin-cola-regional-a-produc/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-008.enc</span><span class="badge ba">◈ MONITOR</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">La Junta anima al sector vitivinícola regional a producir vino «con menor huella de carbono»</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La consejera de Desarrollo Sostenible, Mercedes Gómez, ha animado al sector vitivinícola de Castilla-La Mancha a avanzar en sosten…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./desaparece-el-techo-de-los-pirineos-investigan-por-qu-n/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-009.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Desaparece el 'techo' de los Pirineos: investigan por qué no está en la cima la cruz del Aneto</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">El 'techo' que corona simbólicamente los Pirineos aragoneses está en busca y captura. Lo denunció un grupo de montañeros que hizo …</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./espa-a-quiere-volver-a-sonre-r-en-c-rdoba-frente-a-ucra/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-010.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">España quiere volver a sonreír en Córdoba frente a Ucrania</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Se acabó la espera. La selección española femenina vuelve a Córdoba dos años después para enfrentarse a Ucrania en un partido clav…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./nervios-miedo-y-confusi-n-para-conseguir-los-papeles/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-011.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Nervios, miedo y confusión para conseguir los 'papeles'</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La sede de Red Íncola en Valladolid hierve de actividad. Si en un día normal pueden pasarse por allí un centenar de personas —que …</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./castilla-la-mancha-rechaza-perder-agua-para-que-rieguen/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-012.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Castilla-La Mancha rechaza perder agua para que rieguen otras: «Volver al secano es la muerte»</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Castilla-La Mancha ha rechazado que los nuevos planes hidrológicos contemplen una pérdida de dotaciones de agua para la región con…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./m-s-de-600-oportunidades-de-empleo-se-presentar-n-en-el/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-013.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Más de 600 oportunidades de empleo se presentarán en el Foro Empléate de la Diputación de Córdoba</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La Diputación de Córdoba, acogerá los próximos días 22 y 23 de abril el Foro 'Empléate con la Diputación de Córdoba', evento que e…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./el-grupo-de-acci-n-local-el-z-ncara-celebra-en-belmonte/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-014.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">El Grupo de Acción Local 'El Záncara' celebra en Belmonte su 30 aniversario</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La Asociación de Desarrollo Integral (ADI) 'El Záncara' ha celebrado este viernes en el municipio de Belmonte su 30 aniversario , …</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./s-nchez-pone-en-guardia-al-gobierno-ante-los-pactos-de-/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-015.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Sánchez pone en guardia al Gobierno ante los pactos de PP y Vox en las autonomías</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">El Gobierno asiste en estado de espera activa al desarrollo de la relación entre PP y Vox . El entendimiento ha fructificado en un…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./piden-al-juzgado-del-caso-adamuz-que-aclare-m-s-la-reti/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-016.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Piden al juzgado del caso Adamuz que aclare más la retirada sin control de los cupones de las soldaduras por Adif</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">La retirada de cupones de vía del lugar del accidente ferroviario de Adamuz por parte de Adif sin permiso judicial y su posterior …</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./mar-a-corina-machado-visita-a-espa-a-en-directo-declara/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-017.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">María Corina Machado visita a España, en directo: declaraciones, encuentro con Feijóo y con Abascal y última hora hoy</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Sigue en directo la visita a España de María Corina Machado , líder de la oposición venezolana, con la última hora de sus entrevis…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./un-vocal-del-cgpj-impugna-el-proceso-para-la-elecci-n-d/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-018.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Un vocal del CGPJ impugna el proceso para la elección del juez español en Europa</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Nuevo revés para las pretensiones del Ejecutivo en su intento de controlar los tiempos y las formas de la Justicia, esta vez con p…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./m-s-de-15-600-aspirantes-se-examinan-este-fin-de-semana/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-019.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Más de 15.600 aspirantes se examinan este fin de semana de las oposiciones del Sescam</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Un total de 15.613 aspirantes están admitidos este fin de semana en nuevas pruebas selectivas correspondientes a las Ofertas Públi…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li><li class="fadein"><a href="./s-nchez-se-viste-de-l-der-global-de-la-izquierda-para-d/" class="win" style="display:block;text-decoration:none;padding:1.25rem;"><div class="wbar" style="margin:-1.25rem -1.25rem .875rem;padding:.38rem .75rem;"><span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span><span class="mono muted" style="font-size:.56rem;margin-left:.4rem;">RPT-020.enc</span><span class="badge bm">◎ ARCHIVO</span><span class="mono" style="font-size:.56rem;margin-left:auto;color:var(--muted);">[IGNORAR]</span></div><h2 class="font-black" style="font-size:clamp(.82rem,2vw,.94rem);color:#f5f5f0;line-height:1.35;margin-bottom:.55rem;">Sánchez se viste de líder global de la izquierda para desviar el foco de sus problemas en España</h2><p class="mono muted" style="font-size:.66rem;line-height:1.45;margin-bottom:.55rem;">Entre halagos, «referente» por aquí y «compañero» por allí, ambos «amigos», Pedro Sánchez arrancó, este viernes de la mano de Luiz…</p><div style="display:flex;gap:.3rem;flex-wrap:wrap;"></div></a></li>
+      </ul>
     </div>
 
-    <!-- Sidebar derecho -->
     <div class="space-y-4">
       
-<div class="card p-4 mb-6">
-  <p class="mono text-xs text-indigo-400 uppercase tracking-widest mb-3">
-    ◈ RED DE AGENTES — LOG ENCRIPTADO
-  </p>
-  <div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[21:04]</span> Agente 02: Incremento del 340% en búsquedas de 'reservas de emergencia'.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[21:04]</span> Agente 12: Actividad inusual en mercados de futuros del crudo. Monitorizando.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[21:04]</span> SIGMA-3: Cumbre no publicada entre líderes G7. Fuentes internas.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[21:04]</span> INTEL-ES: Reunión de emergencia en Bruselas. Sin comunicado oficial.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[21:04]</span> Operativo 09: Movimiento de divisas en mercados asiáticos. Correlación positiva.</div>
-  <p class="mono text-xs text-slate-700 mt-3">
-    SHA-256: 21ec8f74ab6edc · CANAL SEGURO · TLS 1.3
-  </p>
+<div class="win">
+  <div class="wbar">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono muted" style="font-size:.58rem;margin-left:.4rem;">TRANSMISIONES.enc · NIVEL-5</span>
+  </div>
+  <div style="padding:1rem;">
+    <p class="mono g" style="font-size:.58rem;letter-spacing:.1em;margin-bottom:.5rem;">◉ RED DE AGENTES — CANAL SEGURO</p>
+    <div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.6rem;">[21:19][ANALISTA-07]</span>&nbsp;<span class="mono muted" style="font-size:.66rem;">Reservas de oro en Frankfurt — acceso restringido al personal de nivel 5+.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.6rem;">[21:19][SIGMA-03]</span>&nbsp;<span class="mono muted" style="font-size:.66rem;">Cumbre G7 no publicada. Fuentes internas. Agenda: infraestructuras críticas.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.6rem;">[21:19][INTEL-ES]</span>&nbsp;<span class="mono muted" style="font-size:.66rem;">Reunión de emergencia no publicada en Bruselas. Sin comunicado oficial.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.6rem;">[21:19][ALPHA-NODE]</span>&nbsp;<span class="mono muted" style="font-size:.66rem;">Patrones de desinformación coordinada detectados en canales gubernamentales.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.6rem;">[21:19][OP-09]</span>&nbsp;<span class="mono muted" style="font-size:.66rem;">Divisas asiáticas: movimiento sincronizado. Posible acción coordinada de bancos centrales.</span></div>
+    <p class="mono muted" style="font-size:.56rem;margin-top:.5rem;">SHA-256: 7a038f44cc44f · TLS-1.3</p>
+  </div>
 </div>
+      
+<div class="win" style="padding:.75rem;">
+  <div class="wbar" style="margin:-.75rem -.75rem .75rem;padding:.38rem .75rem;">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono" style="font-size:.58rem;margin-left:.4rem;color:var(--g);">🥇 XAU/USD · ORO</span>
+  </div>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {"symbol":"OANDA:XAUUSD","width":"100%","height":140,"colorTheme":"dark","isTransparent":true,"locale":"es"}
+    </script>
+  </div>
+</div>
+      
+<div class="win" style="padding:.75rem;">
+  <div class="wbar" style="margin:-.75rem -.75rem .75rem;padding:.38rem .75rem;">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono" style="font-size:.58rem;margin-left:.4rem;color:var(--g);">🛢️ BRENT CRUDO</span>
+  </div>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {"symbol":"OANDA:BCOUSD","width":"100%","height":140,"colorTheme":"dark","isTransparent":true,"locale":"es"}
+    </script>
+  </div>
+</div>
+      
+<div class="win" style="padding:.75rem;">
+  <div class="wbar" style="margin:-.75rem -.75rem .75rem;padding:.38rem .75rem;">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono" style="font-size:.58rem;margin-left:.4rem;color:var(--g);">₿ BITCOIN</span>
+  </div>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+    {"symbol":"BITSTAMP:BTCUSD","width":"100%","height":140,"colorTheme":"dark","isTransparent":true,"locale":"es"}
+    </script>
+  </div>
+</div>
+    </div>
 
-      <!-- TradingView mini chart Oro -->
-      <div class="card p-3">
-        <p class="mono text-xs text-indigo-400 mb-2 uppercase tracking-widest">◈ XAU/USD — ORO</p>
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript"
-            src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-          {
-            "symbol":"OANDA:XAUUSD","width":"100%","height":150,
-            "colorTheme":"dark","isTransparent":true,"locale":"es"
-          }
-          </script>
-        </div>
-      </div>
+  </div>
 
-      <!-- TradingView mini chart Brent -->
-      <div class="card p-3">
-        <p class="mono text-xs text-amber-400 mb-2 uppercase tracking-widest">◈ BRENT CRUDO</p>
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <script type="text/javascript"
-            src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-          {
-            "symbol":"OANDA:BCOUSD","width":"100%","height":150,
-            "colorTheme":"dark","isTransparent":true,"locale":"es"
-          }
-          </script>
-        </div>
-      </div>
+  
+<section style="margin-bottom:3rem;">
+  <div class="wbar" style="background:#100e08;border:1px solid rgba(234,179,8,.2);
+                            border-radius:.75rem .75rem 0 0;border-bottom:none;">
+    <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
+    <span class="mono amb" style="font-size:.58rem;margin-left:.4rem;letter-spacing:.07em;">
+      SUMINISTROS-TACTICOS.db · 6 ITEMS
+    </span>
+  </div>
+  <div style="border:1px solid rgba(234,179,8,.2);border-top:none;
+              border-radius:0 0 .75rem .75rem;padding:1rem;">
+    <p class="mono muted" style="font-size:.58rem;letter-spacing:.06em;margin-bottom:.75rem;">
+      EQUIPAMIENTO SELECCIONADO · AFFILIATE DISCLOSURE · AMAZON.ES
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.75rem;">
+      <a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">Mochila Táctica 45L MOLLE</p><span class="badge ba">ESSENTIAL</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">Equipamiento nivel operativo.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">Linterna Táctica 2000 Lm</p><span class="badge ba">TIER-1</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">Cuando corten la luz, seguirás viendo.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">Kit Supervivencia 72h</p><span class="badge ba">CRITICAL</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">72h de autonomía. Recomendado por gobiernos.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">El Arte de la Guerra — Sun Tzu</p><span class="badge ba">INTEL</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">El manual que usan los que mandan.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">Radio Emergencia AM/FM/SW</p><span class="badge ba">COMM</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">Sin internet. Sin censura. Siempre funciona.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="supply"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.4rem;"><p style="font-weight:900;font-size:.83rem;color:var(--bone);">Filtro de Agua Portátil</p><span class="badge ba">SUPPLY</span></div><p class="mono muted" style="font-size:.66rem;line-height:1.4;">El activo más infravalorado del siglo XXI.</p><p class="mono g" style="font-size:.6rem;margin-top:.4rem;">→ Amazon.es</p></a>
     </div>
   </div>
-
-  <!-- Tienda táctica -->
-  
-<section class="mb-12">
-  <div class="flex items-center gap-3 mb-4">
-    <span class="amber font-black text-lg">⚡</span>
-    <h2 class="font-black text-white text-lg uppercase tracking-wider">TIENDA DE SUMINISTROS TÁCTICOS</h2>
-    <span class="mono text-xs text-amber-400 border border-amber-800 px-2 py-0.5 rounded">END-TIMES READY</span>
-  </div>
-  <p class="mono text-xs text-slate-500 mb-4">Equipamiento para cuando el sistema falle. Selección Solaris.</p>
-  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3"><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🎒</span><p class="font-black text-white text-sm mb-1">Mochila Táctica Militar 45L</p><p class="mono text-xs text-amber-400 leading-snug">Equipamiento nivel operativo. Para cuando el sistema falle.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🔦</span><p class="font-black text-white text-sm mb-1">Linterna Táctica 2000 Lúmenes</p><p class="mono text-xs text-amber-400 leading-snug">Cuando corten la luz, tú seguirás viendo.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🧰</span><p class="font-black text-white text-sm mb-1">Kit de Emergencia Supervivencia</p><p class="mono text-xs text-amber-400 leading-snug">72 horas de autonomía. Lo que recomiendan los gobiernos.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">📖</span><p class="font-black text-white text-sm mb-1">Libro: El Arte de la Guerra</p><p class="mono text-xs text-amber-400 leading-snug">Sun Tzu. El manual que usan los que mandan.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">📻</span><p class="font-black text-white text-sm mb-1">Radio AM/FM de Emergencia</p><p class="mono text-xs text-amber-400 leading-snug">Funciona sin internet. Sin censura de algoritmos.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">💧</span><p class="font-black text-white text-sm mb-1">Filtro de Agua Portátil</p><p class="mono text-xs text-amber-400 leading-snug">El activo más infravalorado del siglo XXI.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a></div>
 </section>
-
 </div>
 
-<footer class="mono text-center text-xs py-6" style="border-top:1px solid #1e1b4b;color:#2d2b55;">
-  © 2026 SOLARISNEWS ORACLE ZERO · SISTEMA AUTÓNOMO · GLOBAL HUB
+<footer style="border-top:1px solid rgba(34,197,94,.08);">
+  
+<div style="text-align:center;padding:2rem 1rem 3rem;">
+  <p class="mono muted" style="font-size:.62rem;letter-spacing:.12em;margin-bottom:.75rem;">◉ CANAL DE INTELIGENCIA PRINCIPAL</p>
+  <a href="https://www.tiktok.com/@solaris01" target="_blank" rel="noopener" class="btn-tt">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#22c55e">
+      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+    </svg>
+    SUSCRIBIRSE AL CANAL DE INTELIGENCIA (TIKTOK)
+  </a>
+  <p class="mono muted" style="font-size:.58rem;margin-top:.75rem;">@solaris01 · ACTUALIZACIONES DIARIAS · SIN FILTROS</p>
+</div>
+  <p class="mono muted" style="text-align:center;font-size:.56rem;padding-bottom:2rem;">
+    © 2026 SOLARISNEWS · ORACLE FINANCIAL AI v8.0 · PRIVATE SNIPER
+  </p>
 </footer>
-
-<script type="text/javascript"
-  src="//pl5727681.highperformancegate.com/5727681/invoke.js"></script>
-<script>document.getElementById("ts").textContent=new Date().toLocaleString("es-ES");</script>
+<script>document.getElementById("ts_h").textContent=new Date().toLocaleString("es-ES");</script>
 </body></html>
