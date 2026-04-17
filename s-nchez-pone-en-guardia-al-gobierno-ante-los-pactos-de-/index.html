@@ -100,7 +100,16 @@ body{
   display:flex;align-items:center;justify-content:center;flex-direction:column;}
 #pwo.hidden{display:none;}
 @media(max-width:640px){.hide-sm{display:none!important;}}
-</style>
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('https://cristiancriscris00-tech.github.io/nuevo-reto/solaris_bg.jpg') center/cover no-repeat;
+  opacity: 0.18;
+  z-index: -1;
+  pointer-events: none;
+}</style>
 </head>
 <body>
 
@@ -135,11 +144,11 @@ body{
 </div>
 <script>
 (function(){
-  const K="c29sYXJpczIwMjQ=";
+  const K="U29sYXJpcy5hcmVzMDM0";
   if(sessionStorage.getItem("sa")===K)document.getElementById("pwo").classList.add("hidden");
 })();
 function _cpw(){
-  const K="c29sYXJpczIwMjQ=";
+  const K="U29sYXJpcy5hcmVzMDM0";
   if(btoa(document.getElementById("pwi").value)===K){
     sessionStorage.setItem("sa",K);
     document.getElementById("pwo").classList.add("hidden");
@@ -163,7 +172,7 @@ function _cpw(){
     </p>
   </div>
   <div class="flex items-center gap-4">
-    <span class="mono muted hide-sm" style="font-size:.62rem;">17 Apr 2026 · 21:20</span>
+    <span class="mono muted hide-sm" style="font-size:.62rem;">17 Apr 2026 · 21:40</span>
     <span class="mono gg" style="font-size:.7rem;">● LIVE<span class="blink">_</span></span>
   </div>
 </nav>
@@ -206,13 +215,20 @@ function _cpw(){
 
   <div style="display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin-bottom:1.25rem;">
     <span class="badge br">◉ ALERTA ACTIVA</span>
-    <span class="badge bm">#202604172120</span>
+    <span class="badge bm">#202604172140</span>
     <span class="badge bm">NODO-ES</span>
     
-    <span class="mono muted" style="font-size:.58rem;">17 Apr 2026 · 21:20</span>
+    <span class="mono muted" style="font-size:.58rem;">17 Apr 2026 · 21:40</span>
   </div>
 
   
+<div style="background:#1a0000;border:1px solid var(--red);border-radius:.75rem;
+            padding:.75rem 1.25rem;margin-bottom:1.5rem;">
+  <p class="mono red" style="font-size:.68rem;font-weight:700;">⚡ ALERTA ALPHA: TENDENCIA CRÍTICA EN DESARROLLO</p>
+  <p class="mono muted" style="font-size:.62rem;margin-top:.2rem;">
+    Este tema ha sido detectado múltiples veces en el ciclo actual. Señal de alta repetición. Monitorización prioritaria.
+  </p>
+</div>
 
   <h1 class="font-black"
       style="font-size:clamp(1.4rem,4vw,2.2rem);color:#f97316;line-height:1.2;margin-bottom:.75rem;">
@@ -227,8 +243,8 @@ function _cpw(){
 <div class="win" style="margin-bottom:1.5rem;">
   <div class="wbar" style="background:#0d0d0d;">
     <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
-    <span class="mono g" style="font-size:.58rem;margin-left:.4rem;">ANÁLISIS-3CAPAS-20260417212037.enc</span>
-    
+    <span class="mono g" style="font-size:.58rem;margin-left:.4rem;">ANÁLISIS-3CAPAS-20260417214039.enc</span>
+    <span class="badge br" style="margin-left:.4rem;">⚡ ALERTA ALPHA</span>
     <span class="badge bm" style="margin-left:auto;">ORACLE-SNIPER</span>
   </div>
   <div style="padding:1.25rem 1.5rem;">
@@ -245,12 +261,12 @@ function _cpw(){
       <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-bottom:.6rem;">
         <div>
           <p class="mono muted" style="font-size:.56rem;">FIABILIDAD</p>
-          <p class="mono" style="font-size:.9rem;font-weight:700;color:var(--muted);">BAJA</p>
+          <p class="mono" style="font-size:.9rem;font-weight:700;color:var(--g);">ALTA</p>
         </div>
         <div style="width:1px;height:2rem;background:#1a1a1a;"></div>
         <div>
           <p class="mono muted" style="font-size:.56rem;">INSTRUCCIÓN</p>
-          <p class="mono" style="font-size:1.1rem;font-weight:700;color:var(--amb);">[VIGILAR]</p>
+          <p class="mono" style="font-size:1.1rem;font-weight:700;color:var(--g);">[ENTRAR]</p>
         </div>
         <div style="width:1px;height:2rem;background:#1a1a1a;" class="hide-sm"></div>
         <div class="hide-sm">
@@ -260,7 +276,7 @@ function _cpw(){
           </p>
         </div>
       </div>
-      <p style="color:#fca5a5;font-size:.83rem;line-height:1.55;">Patrón débil pero emergente. Mantener en radar. Confirmar con segundo vector.</p>
+      <p style="color:#fca5a5;font-size:.83rem;line-height:1.55;">Señales alineadas. Múltiples vectores convergen. Posicionamiento defensivo activo.</p>
     </div>
   </div>
 </div>
@@ -289,7 +305,7 @@ function _cpw(){
     </div>
     <div style="padding:1.25rem 1.5rem;">
       <p class="mono g" style="font-size:.58rem;letter-spacing:.1em;margin-bottom:.5rem;">◈ ANÁLISIS DE INTELIGENCIA SOLARIS</p>
-      <p style="color:var(--bone);line-height:1.7;font-style:italic;">"Análisis de frecuencia completado. Este evento encaja en el perfil de operaciones de desinformación de alta intensidad. Vigilancia activa."</p>
+      <p style="color:var(--bone);line-height:1.7;font-style:italic;">"Los movimientos detrás de este titular apuntan a una reconfiguración del poder real. Los actores visibles raramente son los actores decisivos."</p>
       <div class="mono muted" style="font-size:.56rem;margin-top:.6rem;display:flex;gap:1rem;flex-wrap:wrap;">
         <span>VECTOR: GEOPOLÍTICO</span>
         <span class="g">CONFIANZA: 94%</span>
@@ -308,7 +324,7 @@ function _cpw(){
       <span class="dot dr"></span><span class="dot dy"></span><span class="dot dg"></span>
       <span class="mono muted" style="font-size:.58rem;margin-left:.4rem;">AGENTES.log · 3 TX</span>
     </div>
-    <div style="padding:1rem;"><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][NODO-EU]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Flujos de capital saliendo de bonos europeos. Volumen: 3.4x media 30d. Confirmado.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][AGENTE-12]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Actividad inusual en futuros de crudo. Correlación con evento geopolítico activo.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][BERLIN-NODE]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Conversaciones activas sobre nuevo mecanismo de defensa europeo autónomo.</span></div></div>
+    <div style="padding:1rem;"><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][SIGMA-03]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Cumbre G7 no publicada. Fuentes internas. Agenda: infraestructuras críticas.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][ALPHA-NODE]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Patrones de desinformación coordinada detectados en canales gubernamentales.</span></div><div style="border-left:2px solid var(--g);padding:.4rem .7rem;margin:.25rem 0;background:#0c0c0c;border-radius:0 .4rem .4rem 0;"><span class="mono g" style="font-size:.58rem;">[17 Ap][BERLIN-NODE]</span>&nbsp;<span class="mono muted" style="font-size:.64rem;">Conversaciones activas sobre nuevo mecanismo de defensa europeo autónomo.</span></div></div>
   </div>
 
   
