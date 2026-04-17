@@ -1,7 +1,7 @@
-name: SolarisNews Oracle Zero 24/7
+name: SolarisNews Oracle Financial AI 24/7
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 jobs:
   publish:
@@ -13,20 +13,28 @@ jobs:
       - run: pip install requests beautifulsoup4 lxml
       - name: Config
         env:
-          ORACLE_TOKEN:   ${{ secrets.ORACLE_TOKEN }}
-          ORACLE_USER:    ${{ secrets.ORACLE_USER }}
-          ORACLE_REPO:    ${{ secrets.ORACLE_REPO }}
-          ORACLE_WEBHOOK: ${{ secrets.ORACLE_WEBHOOK }}
-          ORACLE_AD_ID:   ${{ secrets.ORACLE_AD_ID }}
-          ORACLE_CPA:     ${{ secrets.ORACLE_CPA }}
-          ORACLE_PAYPAL:  ${{ secrets.ORACLE_PAYPAL }}
+          ORACLE_TOKEN:    ${{ secrets.ORACLE_TOKEN }}
+          ORACLE_USER:     ${{ secrets.ORACLE_USER }}
+          ORACLE_REPO:     ${{ secrets.ORACLE_REPO }}
+          ORACLE_WEBHOOK:  ${{ secrets.ORACLE_WEBHOOK }}
+          ORACLE_AD_ID:    ${{ secrets.ORACLE_AD_ID }}
+          ORACLE_CPA:      ${{ secrets.ORACLE_CPA }}
+          ORACLE_PAYPAL:   ${{ secrets.ORACLE_PAYPAL }}
+          ORACLE_PASSWORD: ${{ secrets.ORACLE_PASSWORD }}
         run: |
           python - <<'PYEOF'
           import json,os
-          cfg={"github_token":os.environ["ORACLE_TOKEN"],"github_user":os.environ["ORACLE_USER"],
-               "repo_name":os.environ["ORACLE_REPO"],"webhook_url":os.environ["ORACLE_WEBHOOK"],
-               "ad_unit_id":os.environ["ORACLE_AD_ID"],"cpa_link":os.environ["ORACLE_CPA"],
-               "paypal_email":os.environ["ORACLE_PAYPAL"],"payout_method":"paypal"}
+          cfg={
+            "github_token":    os.environ["ORACLE_TOKEN"],
+            "github_user":     os.environ["ORACLE_USER"],
+            "repo_name":       os.environ["ORACLE_REPO"],
+            "webhook_url":     os.environ["ORACLE_WEBHOOK"],
+            "ad_unit_id":      os.environ["ORACLE_AD_ID"],
+            "cpa_link":        os.environ["ORACLE_CPA"],
+            "paypal_email":    os.environ["ORACLE_PAYPAL"],
+            "payout_method":   "paypal",
+            "access_password": os.environ.get("ORACLE_PASSWORD","solaris2024"),
+          }
           open("config.json","w").write(json.dumps(cfg))
           PYEOF
       - run: python astral_oracle.py --once
