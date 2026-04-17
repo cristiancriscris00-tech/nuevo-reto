@@ -3,62 +3,180 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content="SolarisNews Intelligence Hub — Noticias geopolíticas de España en tiempo real, 24/7."/>
-  <title>SolarisNews Intelligence Hub | Última Hora España</title>
+  <meta name="description" content="Portal de inteligencia geopolítica y financiera. Noticias filtradas, análisis profundo, commodities en tiempo real."/>
+  <meta property="og:title" content="SolarisNews Oracle Zero | Inteligencia Geopolítica Global"/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://cristiancriscris00-tech.github.io/nuevo-reto/"/>
+  <title>SolarisNews Oracle Zero | Inteligencia Geopolítica Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body{background:#050505;}
+    *{box-sizing:border-box;}
+    body{background:#020202;font-family:'Inter',sans-serif;}
     .mono{font-family:'Courier New',Courier,monospace;}
-    .neon{color:#6366f1;text-shadow:0 0 12px #6366f188;}
-    .card-border{border:1px solid #1e1b4b;box-shadow:0 0 20px #6366f110;}
-    .grid-dash{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;}
+    .neon{color:#6366f1;text-shadow:0 0 14px #6366f199;}
+    .amber{color:#f59e0b;text-shadow:0 0 10px #f59e0b66;}
+    .card{background:#0a0a0f;border:1px solid #1e1b4b;border-radius:1rem;
+           box-shadow:0 0 24px #6366f10d;transition:transform .15s,box-shadow .15s;}
+    .card:hover{transform:translateY(-2px);box-shadow:0 0 32px #6366f122;}
+    .ticker-bar{background:#060610;border-bottom:1px solid #1e1b4b;}
+    .intel-block{background:#0d0b2a;border:1px solid #3730a3;border-radius:.875rem;}
+    .store-card{background:#0a0805;border:1px solid #92400e;border-radius:1rem;}
+    .chat-msg{background:#08080f;border-left:2px solid #6366f1;padding:.5rem .75rem;
+               margin:.4rem 0;border-radius:0 .5rem .5rem 0;font-size:.7rem;}
+    .pulse{animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    @media(max-width:640px){.hide-mobile{display:none!important;}}
   </style>
+  <!-- Adsterra Social Bar -->
+  <script type="text/javascript"
+    src="//pl5727681.highperformancegate.com/5727681/invoke.js" async defer></script>
 </head>
-<body class="text-white font-sans min-h-screen">
+<body class="text-white min-h-screen">
 
-  <nav style="background:#08080f;border-bottom:1px solid #1e1b4b;"
-       class="px-6 py-4 flex items-center justify-between sticky top-0 z-50">
-    <div>
-      <span class="neon font-black text-2xl mono tracking-widest">◈ SOLARIS<span class="text-white">NEWS</span></span>
-      <p class="mono text-xs text-slate-600 mt-0.5">INTELLIGENCE HUB · ESPAÑA</p>
-    </div>
-    <div class="text-right hidden sm:block">
-      <p class="mono text-xs text-indigo-400">17 Apr 2026 · 16:51</p>
-      <p class="mono text-xs text-green-400 animate-pulse">● SISTEMA ACTIVO</p>
-    </div>
-  </nav>
+<nav style="background:#060610;border-bottom:1px solid #1e1b4b;"
+     class="px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-50">
+  <div>
+    <a href="/" class="neon font-black text-xl mono tracking-widest">◈ SOLARIS<span style="color:#fff">NEWS</span></a>
+    <p class="mono text-slate-600 text-xs mt-0.5 hide-mobile">ORACLE ZERO · GLOBAL INTELLIGENCE HUB</p>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="mono text-xs text-indigo-400 hide-mobile">17 Apr 2026 · 17:23</span>
+    <span class="mono text-xs" style="color:#22c55e;">● <span class="pulse">LIVE</span></span>
+  </div>
+</nav>
 
-  <div class="flex justify-center py-3" style="background:#08080f;border-bottom:1px solid #1e1b4b;">
-    <script type="text/javascript" src="//pl5727681.highperformancegate.com/5727681/invoke.js"></script>
+<!-- TradingView Ticker Widget -->
+<div class="ticker-bar py-2 px-2 overflow-hidden">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols":[
+        {"proName":"OANDA:XAUUSD","title":"Oro XAU/USD"},
+        {"proName":"OANDA:BCOUSD","title":"Brent Crudo"},
+        {"proName":"BITSTAMP:BTCUSD","title":"Bitcoin"},
+        {"proName":"BME:IBC","title":"IBEX 35"},
+        {"proName":"FX_IDC:EURUSD","title":"EUR/USD"}
+      ],
+      "showSymbolLogo":true,
+      "colorTheme":"dark",
+      "isTransparent":true,
+      "displayMode":"adaptive",
+      "locale":"es"
+    }
+    </script>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="text-center py-10 px-4" style="background:linear-gradient(180deg,#0d0b1a 0%,#020202 100%);">
+  <p class="mono text-xs text-indigo-400 tracking-widest mb-3 pulse">◉ SISTEMA ORACLE ZERO — MONITORIZACIÓN GLOBAL ACTIVA</p>
+  <h1 class="text-4xl sm:text-6xl font-black mb-2"
+      style="background:linear-gradient(90deg,#6366f1,#a5b4fc,#fff);
+             -webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+    SolarisNews
+  </h1>
+  <p class="mono text-slate-500 text-xs sm:text-sm">
+    ORACLE ZERO · 20 ALERTAS GEOPOLÍTICAS ACTIVAS · <span id="ts"></span>
+  </p>
+</header>
+
+<div class="max-w-6xl mx-auto px-4 pb-16">
+
+  <!-- Subscribe banner -->
+  
+<div style="background:linear-gradient(135deg,#0d0b2a,#020202);border:1px solid #3730a3;"
+     class="rounded-2xl p-6 mb-8 text-center">
+  <p class="mono text-xs text-indigo-400 uppercase tracking-widest mb-2">◉ NIVEL DE ACCESO 5</p>
+  <h2 class="text-xl sm:text-2xl font-black text-white mb-2">
+    INTELIGENCIA SIN FILTROS — <span class="neon">PRÓXIMAMENTE</span>
+  </h2>
+  <p class="text-slate-400 text-sm mb-4 max-w-lg mx-auto">
+    Recibe los informes de inteligencia geopolítica antes que nadie.
+    Acceso directo a los análisis de alto nivel. Sin ruido. Sin censura.
+  </p>
+  <button class="mono text-xs px-6 py-3 rounded-xl font-bold text-white cursor-default"
+          style="background:#1e1b4b;border:1px solid #6366f1;">
+    UNIRSE A LA LISTA DE ESPERA →
+  </button>
+</div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- Columna principal: noticias -->
+    <div class="lg:col-span-2">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="mono text-xs text-red-400 border border-red-900 px-2 py-1 rounded">◉ EN DIRECTO</span>
+        <span class="mono text-xs text-slate-600">20 INFORMES · FILTRO GEOPOLÍTICO ACTIVO</span>
+      </div>
+      <ul class="space-y-3"><li><a href="./muere-gracia-s-nchez-caballos-la-mujer-del-expresidente/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#01 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Muere Gracia Sánchez Caballos, la mujer del expresidente andaluz José Rodríguez de la Borbolla</h2><p class="mono text-xs text-slate-500 leading-relaxed">Después de varios años luchando con una grave enfermedad, ha fallecido María Gracia Sánchez Caballos, esposa del que fue…</p></a></li><li><a href="./la-plantilla-de-las-38-escuelas-infantiles-de-la-junta-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#02 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La plantilla de las 38 escuelas infantiles de la Junta, en huelga el próximo 7 de mayo</h2><p class="mono text-xs text-slate-500 leading-relaxed">El sindicato CSIF ha mostrado su apoyo a la huelga convocada para el próximo 7 de mayo por la Plataforma de Escuelas Inf…</p></a></li><li><a href="./castilla-la-mancha-rechaza-perder-agua-para-que-rieguen/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#03 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Castilla-La Mancha rechaza perder agua para que rieguen otras: «Volver al secano es la muerte»</h2><p class="mono text-xs text-slate-500 leading-relaxed">Castilla-La Mancha ha rechazado que los nuevos planes hidrológicos contemplen una pérdida de dotaciones de agua para la …</p></a></li><li><a href="./todas-las-personas-que-tienen-las-llaves-de-madrid-del-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#04 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Todas las personas que tienen las Llaves de Madrid: del Duque de Wellington a María Corina Machado</h2><p class="mono text-xs text-slate-500 leading-relaxed">Boabdil, el último sultán de Granada, entregó las llaves de la ciudad a Gutierre de Cárdenas, enviado de Isabel la Catól…</p></a></li><li><a href="./detenido-tras-irrumpir-violentamente-en-la-casa-de-un-f/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#05 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Detenido tras irrumpir violentamente en la casa de un familiar para robarle en Canarias</h2><p class="mono text-xs text-slate-500 leading-relaxed">La Guardia Civil de Vecindario (Gran Canaria) ha detenido a un hombre por presuntamente robar con violencia e intimidaci…</p></a></li><li><a href="./canarias-no-recurrir-la-regularizaci-n-de-migrantes-y-c/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#06 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Canarias no recurrirá la regularización de migrantes y critica los discursos «xenófobos» de Vox</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente de Canarias y líder de CC, Fernando Clavijo, ha asegurado que la comunidad no recurrirá la regulación extr…</p></a></li><li><a href="./la-pera-regresa-a-valladolid-con-cavalleria-rusticana-y/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#07 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La ópera regresa a Valladolid con 'Cavalleria rusticana' y 'Pagliacci', dos imprescindibles del repertorio</h2><p class="mono text-xs text-slate-500 leading-relaxed">La ópera regresa a Valladolid de la mano de 'Cavalleria rusticana / Pagliacci', dos obras imprescindibles en el repertor…</p></a></li><li><a href="./el-tc-tiene-que-ganarse-su-legitimidad-d-a-a-d-a-puede-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#08 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">«El TC tiene que ganarse su legitimidad día a día; puede interpretar, pero no crear derechos nuevos»</h2><p class="mono text-xs text-slate-500 leading-relaxed">¿Existen límites a la interpretación evolutiva de la Constitución por parte del TC? Sí, la propia Carta Magna, a la que …</p></a></li><li><a href="./s-nchez-pone-en-guardia-al-gobierno-ante-los-pactos-de-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#09 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Sánchez pone en guardia al Gobierno ante los pactos de PP y Vox en las autonomías</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Gobierno asiste en estado de espera activa al desarrollo de la relación entre PP y Vox . El entendimiento ha fructifi…</p></a></li><li><a href="./junts-anuncia-una-ofensiva-pol-tica-e-institucional-par/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#10 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Junts anuncia «una ofensiva política e institucional» para que el catalán sea obligatorio en la regularización de inmigrantes</h2><p class="mono text-xs text-slate-500 leading-relaxed">Junts ha anunciado este viernes «una ofensiva política e institucional» para que, durante el proceso de regularización d…</p></a></li><li><a href="./feij-o-se-vuelca-con-mar-a-corina-machado-aqu-est-tu-pa/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#11 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Feijóo se vuelca con María Corina Machado: «Aquí está tu partido en España»</h2><p class="mono text-xs text-slate-500 leading-relaxed">Como si fuera un día de resaca tras una gran noche electoral, con una victoria del PP, el partido de Alberto Núñez Feijó…</p></a></li><li><a href="./ma-ueco-cree-que-el-acuerdo-de-pp-y-vox-en-extremadura-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#12 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Mañueco cree que el acuerdo de PP y Vox en Extremadura «no influirá» en Castilla y León</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente de la Junta de Castilla y León en funciones, Alfonso Fernández Mañueco , ha defendido que el acuerdo entre…</p></a></li><li><a href="./la-voz-de-otero-pedrayo-resucita-en-seis-grabaciones-in/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#13 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La voz de Otero Pedrayo resucita en seis grabaciones inéditas</h2><p class="mono text-xs text-slate-500 leading-relaxed">Medio siglo más tarde, Ramón Otero Pedrayo vuelve a hablar. O, al menos, su voz vuelve a sonar. El Consello da Cultura G…</p></a></li><li><a href="./la-izquierda-lleva-a-villalar-el-no-a-la-guerra-y-el-re/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#14 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La izquierda lleva a Villalar el «No a la guerra» y el rechazo a un gobierno PP-Vox</h2><p class="mono text-xs text-slate-500 leading-relaxed">Las 16 organizaciones firmantes del 'Manifiesto de Villalar de 2026' se han hecho eco del contexto geopolítico mundial p…</p></a></li><li><a href="./la-embajada-espa-ola-en-dehli-atiende-a-la-familia-del-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#15 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">La embajada española en Dehli atiende a la familia del alicantino atacado por un tiburón en Maldivas</h2><p class="mono text-xs text-slate-500 leading-relaxed">El turista español que sufrió el ataque de un tiburón durante su luna de miel en las islas Maldivas continúa avanzando e…</p></a></li><li><a href="./los-municipios-de-madrid-denuncian-el-colapso-de-servic/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#16 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Los municipios de Madrid denuncian el «colapso de servicios» con la regularización masiva de inmigrantes</h2><p class="mono text-xs text-slate-500 leading-relaxed">Los municipios de Madrid han alzado la voz contra la regularización masiva de inmigrantes que ha impulsado el Gobierno d…</p></a></li><li><a href="./los-investigadores-recogen-muestras-de-la-escalera-y-es/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#17 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Los investigadores recogen muestras de la escalera y esquinas de la bodega de la antigua casa del sospechoso de la muerte de Esther López</h2><p class="mono text-xs text-slate-500 leading-relaxed">La inspección y recogida de muestras por parte de la Guardia Civil en el que fuera chalé propiedad de Óscar S.M. -único …</p></a></li><li><a href="./s-nchez-desvela-que-corina-machado-no-ha-querido-verse-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#18 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Sánchez desvela que Corina Machado no ha querido verse con él: «Las puertas de la Moncloa están abiertas»</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente del Gobierno ha asegurado, este viernes, que ha sido la líder opositora de Venezuela, María Corina Machado…</p></a></li><li><a href="./paco-n-ez-reclama-agua-y-precios-justos-para-el-campo-s/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#19 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Paco Núñez reclama agua y precios justos para el campo: «Sin rentabilidad no hay agricultura»</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente del Partido Popular de Castilla-La Mancha, Paco Núñez , ha afirmado este viernes que « sin rentabilidad no…</p></a></li><li><a href="./batalla-de-las-flores-en-c-rdoba-2026-fecha-itinerario-/" class="card block p-5"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#20 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-sm sm:text-base leading-snug mb-2">Batalla de las flores en Córdoba 2026: fecha, itinerario y horario</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Ayuntamiento de Córdoba ha presentado este viernes la tradicional fiesta de las Batalla de las Flores de la mano del …</p></a></li></ul>
+    </div>
+
+    <!-- Sidebar derecho -->
+    <div class="space-y-4">
+      
+<div class="card p-4 mb-6">
+  <p class="mono text-xs text-indigo-400 uppercase tracking-widest mb-3">
+    ◈ RED DE AGENTES — LOG ENCRIPTADO
+  </p>
+  <div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[17:23]</span> Agente 04: Movimientos detectados en el Estrecho. Vigilancia activa.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[17:23]</span> SIGMA-3: Cumbre no publicada entre líderes G7. Fuentes internas.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[17:23]</span> Nodo SIGMA: Flujos de capital saliendo de bonos europeos. Confirmado.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[17:23]</span> Agente 12: Actividad inusual en mercados de futuros del crudo. Monitorizando.</div><div class="chat-msg mono text-indigo-300"><span style="color:#f59e0b">[17:23]</span> Nodo BERLIN: Conversaciones sobre nuevo mecanismo de defensa europeo.</div>
+  <p class="mono text-xs text-slate-700 mt-3">
+    SHA-256: 22f727e32199b8 · CANAL SEGURO · TLS 1.3
+  </p>
+</div>
+
+      <!-- TradingView mini chart Oro -->
+      <div class="card p-3">
+        <p class="mono text-xs text-indigo-400 mb-2 uppercase tracking-widest">◈ XAU/USD — ORO</p>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+            "symbol":"OANDA:XAUUSD","width":"100%","height":150,
+            "colorTheme":"dark","isTransparent":true,"locale":"es"
+          }
+          </script>
+        </div>
+      </div>
+
+      <!-- TradingView mini chart Brent -->
+      <div class="card p-3">
+        <p class="mono text-xs text-amber-400 mb-2 uppercase tracking-widest">◈ BRENT CRUDO</p>
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+            "symbol":"OANDA:BCOUSD","width":"100%","height":150,
+            "colorTheme":"dark","isTransparent":true,"locale":"es"
+          }
+          </script>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <header class="text-center py-12 px-4" style="background:linear-gradient(180deg,#0d0d1a 0%,#050505 100%);">
-    <p class="mono text-xs text-indigo-400 tracking-widest mb-3 animate-pulse">◉ MONITORIZACIÓN EN TIEMPO REAL ACTIVADA</p>
-    <h1 class="text-5xl sm:text-6xl font-black mb-3"
-        style="background:linear-gradient(90deg,#6366f1,#a5b4fc,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
-      SolarisNews
-    </h1>
-    <p class="text-slate-400 text-sm mono">Portal de inteligencia geopolítica · 20 eventos activos</p>
-    <p class="mono text-xs text-slate-600 mt-2">ACTUALIZADO: <span id="ts"></span></p>
-  </header>
-
-  <div class="flex justify-center my-4">
-    <script type="text/javascript" src="//pl5727681.highperformancegate.com/5727681/invoke.js"></script>
+  <!-- Tienda táctica -->
+  
+<section class="mb-12">
+  <div class="flex items-center gap-3 mb-4">
+    <span class="amber font-black text-lg">⚡</span>
+    <h2 class="font-black text-white text-lg uppercase tracking-wider">TIENDA DE SUMINISTROS TÁCTICOS</h2>
+    <span class="mono text-xs text-amber-400 border border-amber-800 px-2 py-0.5 rounded">END-TIMES READY</span>
   </div>
+  <p class="mono text-xs text-slate-500 mb-4">Equipamiento para cuando el sistema falle. Selección Solaris.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3"><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🎒</span><p class="font-black text-white text-sm mb-1">Mochila Táctica Militar 45L</p><p class="mono text-xs text-amber-400 leading-snug">Equipamiento nivel operativo. Para cuando el sistema falle.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🔦</span><p class="font-black text-white text-sm mb-1">Linterna Táctica 2000 Lúmenes</p><p class="mono text-xs text-amber-400 leading-snug">Cuando corten la luz, tú seguirás viendo.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">🧰</span><p class="font-black text-white text-sm mb-1">Kit de Emergencia Supervivencia</p><p class="mono text-xs text-amber-400 leading-snug">72 horas de autonomía. Lo que recomiendan los gobiernos.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">📖</span><p class="font-black text-white text-sm mb-1">Libro: El Arte de la Guerra</p><p class="mono text-xs text-amber-400 leading-snug">Sun Tzu. El manual que usan los que mandan.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">📻</span><p class="font-black text-white text-sm mb-1">Radio AM/FM de Emergencia</p><p class="mono text-xs text-amber-400 leading-snug">Funciona sin internet. Sin censura de algoritmos.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a><a href="https://www.amazon.es/?tag=solaris01-21" target="_blank" rel="noopener" class="store-card p-4 block hover:scale-[1.02] transition"><span class="text-3xl mb-2 block">💧</span><p class="font-black text-white text-sm mb-1">Filtro de Agua Portátil</p><p class="mono text-xs text-amber-400 leading-snug">El activo más infravalorado del siglo XXI.</p><p class="mono text-xs text-slate-600 mt-2">→ Ver en Amazon</p></a></div>
+</section>
 
-  <main class="max-w-6xl mx-auto px-4 pb-16">
-    <div class="flex items-center gap-3 mb-6">
-      <span class="mono text-xs text-red-400 border border-red-900 px-2 py-1 rounded">◉ EN DIRECTO</span>
-      <span class="mono text-xs text-slate-600">20 INFORMES ACTIVOS · NODO ES-INTEL-01</span>
-    </div>
-    <ul class="grid-dash"><li><a href="./canarias-no-recurrir-la-regularizaci-n-de-migrantes-y-c/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#01 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Canarias no recurrirá la regularización de migrantes y critica los discursos «xenófobos» de Vox</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente de Canarias y líder de CC, Fernando Clavijo, ha asegurado que la comunidad no recurrirá la regul…</p></a></li><li><a href="./la-pera-regresa-a-valladolid-con-cavalleria-rusticana-y/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#02 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-base leading-snug mb-2">La ópera regresa a Valladolid con 'Cavalleria rusticana' y 'Pagliacci', dos imprescindibles del repertorio</h2><p class="mono text-xs text-slate-500 leading-relaxed">La ópera regresa a Valladolid de la mano de 'Cavalleria rusticana / Pagliacci', dos obras imprescindibles en e…</p></a></li><li><a href="./el-tc-tiene-que-ganarse-su-legitimidad-d-a-a-d-a-puede-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#03 · ESP</span><span class="mono text-xs">🔴 BREAKING</span></div><h2 class="font-black text-white text-base leading-snug mb-2">«El TC tiene que ganarse su legitimidad día a día; puede interpretar, pero no crear derechos nuevos»</h2><p class="mono text-xs text-slate-500 leading-relaxed">¿Existen límites a la interpretación evolutiva de la Constitución por parte del TC? Sí, la propia Carta Magna,…</p></a></li><li><a href="./s-nchez-pone-en-guardia-al-gobierno-ante-los-pactos-de-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#04 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Sánchez pone en guardia al Gobierno ante los pactos de PP y Vox en las autonomías</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Gobierno asiste en estado de espera activa al desarrollo de la relación entre PP y Vox . El entendimiento h…</p></a></li><li><a href="./junts-anuncia-una-ofensiva-pol-tica-e-institucional-par/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#05 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Junts anuncia «una ofensiva política e institucional» para que el catalán sea obligatorio en la regularización de inmigrantes</h2><p class="mono text-xs text-slate-500 leading-relaxed">Junts ha anunciado este viernes «una ofensiva política e institucional» para que, durante el proceso de regula…</p></a></li><li><a href="./feij-o-se-vuelca-con-mar-a-corina-machado-aqu-est-tu-pa/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#06 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Feijóo se vuelca con María Corina Machado: «Aquí está tu partido en España»</h2><p class="mono text-xs text-slate-500 leading-relaxed">Como si fuera un día de resaca tras una gran noche electoral, con una victoria del PP, el partido de Alberto N…</p></a></li><li><a href="./ma-ueco-cree-que-el-acuerdo-de-pp-y-vox-en-extremadura-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#07 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Mañueco cree que el acuerdo de PP y Vox en Extremadura «no influirá» en Castilla y León</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente de la Junta de Castilla y León en funciones, Alfonso Fernández Mañueco , ha defendido que el acu…</p></a></li><li><a href="./la-voz-de-otero-pedrayo-resucita-en-seis-grabaciones-in/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#08 · ESP</span><span class="mono text-xs">🟡 MONITOR</span></div><h2 class="font-black text-white text-base leading-snug mb-2">La voz de Otero Pedrayo resucita en seis grabaciones inéditas</h2><p class="mono text-xs text-slate-500 leading-relaxed">Medio siglo más tarde, Ramón Otero Pedrayo vuelve a hablar. O, al menos, su voz vuelve a sonar. El Consello da…</p></a></li><li><a href="./la-izquierda-lleva-a-villalar-el-no-a-la-guerra-y-el-re/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#09 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">La izquierda lleva a Villalar el «No a la guerra» y el rechazo a un gobierno PP-Vox</h2><p class="mono text-xs text-slate-500 leading-relaxed">Las 16 organizaciones firmantes del 'Manifiesto de Villalar de 2026' se han hecho eco del contexto geopolítico…</p></a></li><li><a href="./la-embajada-espa-ola-en-dehli-atiende-a-la-familia-del-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#10 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">La embajada española en Dehli atiende a la familia del alicantino atacado por un tiburón en Maldivas</h2><p class="mono text-xs text-slate-500 leading-relaxed">El turista español que sufrió el ataque de un tiburón durante su luna de miel en las islas Maldivas continúa a…</p></a></li><li><a href="./los-municipios-de-madrid-denuncian-el-colapso-de-servic/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#11 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Los municipios de Madrid denuncian el «colapso de servicios» con la regularización masiva de inmigrantes</h2><p class="mono text-xs text-slate-500 leading-relaxed">Los municipios de Madrid han alzado la voz contra la regularización masiva de inmigrantes que ha impulsado el …</p></a></li><li><a href="./los-investigadores-recogen-muestras-de-la-escalera-y-es/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#12 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Los investigadores recogen muestras de la escalera y esquinas de la bodega de la antigua casa del sospechoso de la muerte de Esther López</h2><p class="mono text-xs text-slate-500 leading-relaxed">La inspección y recogida de muestras por parte de la Guardia Civil en el que fuera chalé propiedad de Óscar S.…</p></a></li><li><a href="./s-nchez-desvela-que-corina-machado-no-ha-querido-verse-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#13 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Sánchez desvela que Corina Machado no ha querido verse con él: «Las puertas de la Moncloa están abiertas»</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente del Gobierno ha asegurado, este viernes, que ha sido la líder opositora de Venezuela, María Cori…</p></a></li><li><a href="./paco-n-ez-reclama-agua-y-precios-justos-para-el-campo-s/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#14 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Paco Núñez reclama agua y precios justos para el campo: «Sin rentabilidad no hay agricultura»</h2><p class="mono text-xs text-slate-500 leading-relaxed">El presidente del Partido Popular de Castilla-La Mancha, Paco Núñez , ha afirmado este viernes que « sin renta…</p></a></li><li><a href="./batalla-de-las-flores-en-c-rdoba-2026-fecha-itinerario-/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#15 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Batalla de las flores en Córdoba 2026: fecha, itinerario y horario</h2><p class="mono text-xs text-slate-500 leading-relaxed">El Ayuntamiento de Córdoba ha presentado este viernes la tradicional fiesta de las Batalla de las Flores de la…</p></a></li><li><a href="./don-juan-carlos-cr-nica-de-una-retirada-muy-poco-discre/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#16 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Don Juan Carlos: crónica de una retirada muy poco discreta</h2><p class="mono text-xs text-slate-500 leading-relaxed">Aunque Juan Carlos I abdicó el 19 de junio de 2014, las imágenes de las últimas dos semanas podrían interpreta…</p></a></li><li><a href="./el-arque-logo-antonio-monterroso-revoluciona-la-c-rdoba/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#17 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">El arqueólogo Antonio Monterroso revoluciona la Córdoba romana: nació en el Parque Cruz Conde</h2><p class="mono text-xs text-slate-500 leading-relaxed">El conocimiento del rico pasado de la capital sigue deparando novedades. La Universidad de Córdoba (UCO) ha in…</p></a></li><li><a href="./el-pp-censura-que-el-psoe-castigue-a-45-000-aut-nomos-d/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#18 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">El PP censura que el PSOE castigue a 45.000 autónomos de Castilla-La Mancha con más cargas</h2><p class="mono text-xs text-slate-500 leading-relaxed">La diputada nacional del PP de Castilla-La Mancha y portavoz en la Comisión del Tribunal de Cuentas del Congre…</p></a></li><li><a href="./page-anuncia-6-millones-para-un-nuevo-centro-de-salud-e/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#19 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Page anuncia 6 millones para un nuevo centro de salud en Herencia y 77 millones en inversión social</h2><p class="mono text-xs text-slate-500 leading-relaxed">El aplauso ha interrumpido hasta en cinco ocasiones el discurso de Emiliano García-Page en Herencia, Ciudad Re…</p></a></li><li><a href="./muere-una-joven-embarazada-y-su-beb-tras-sufrir-ella-un/" class="block card-border rounded-2xl p-5 transition hover:scale-[1.02]" style="background:#0d0d1a;"><div class="flex items-center justify-between mb-2"><span class="mono text-xs text-indigo-400">#20 · ESP</span><span class="mono text-xs">⚪ ARCHIVO</span></div><h2 class="font-black text-white text-base leading-snug mb-2">Muere una joven embarazada y su bebé tras sufrir ella un atragantamiento en Beniel (Murcia)</h2><p class="mono text-xs text-slate-500 leading-relaxed">Una mujer de 28 años y su bebé, del que estaba embarazada de 30 semanas, han fallecido este jueves tras sufrir…</p></a></li></ul>
-  </main>
+</div>
 
-  <footer class="mono text-center text-xs py-8" style="border-top:1px solid #1e1b4b;color:#2d2b55;">
-    © 2026 SOLARISNEWS INTELLIGENCE HUB · SISTEMA AUTÓNOMO · ESPAÑA
-  </footer>
+<footer class="mono text-center text-xs py-6" style="border-top:1px solid #1e1b4b;color:#2d2b55;">
+  © 2026 SOLARISNEWS ORACLE ZERO · SISTEMA AUTÓNOMO · GLOBAL HUB
+</footer>
 
-  <script type="text/javascript" src="//pl5727681.highperformancegate.com/5727681/invoke.js"></script>
-  <script>document.getElementById("ts").textContent = new Date().toLocaleString("es-ES");</script>
-</body>
-</html>
+<script type="text/javascript"
+  src="//pl5727681.highperformancegate.com/5727681/invoke.js"></script>
+<script>document.getElementById("ts").textContent=new Date().toLocaleString("es-ES");</script>
+</body></html>
