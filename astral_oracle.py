@@ -12,7 +12,7 @@ logging.basicConfig(
 log = logging.getLogger("solarisnews")
 
 CONFIG_PATH   = Path("config.json")
-CYCLE_SECONDS = 3600
+CYCLE_SECONDS = 1800
 RETRY_SECONDS = 30
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -294,7 +294,7 @@ name: SolarisNews 24/7
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
